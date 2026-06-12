@@ -1,5 +1,9 @@
 # RP2040 HID UPS Simulator
 
+I've inspired by https://github.com/jef41/PicoHIDPowerDevice and i'm not familiar with MicroPython thus i decided to make one of my own :D This runs well on Windows showing 'battery' status but need further steps in Linux-based OS.
+
+## Description
+
 A small Arduino sketch that turns a Raspberry Pi RP2040 (tested on a VCC-GND YD RP2040 clone) into a USB HID-class **Uninterruptible Power Supply (UPS)**. The device enumerates with Usage Page `0x84` (Power Device), Usage `0x04` (UPS), and a `PowerSummary` logical collection. It answers GET_REPORT for all 10 fields (capacities, runtime, present status, battery status, manufacturer/product/serial/chemistry strings) and pushes unsolicited PresentStatus and RemainingCapacity reports every 2 s.
 
 The host sees:
