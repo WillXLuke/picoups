@@ -1,3 +1,15 @@
+/*
+ * RP2040 HID UPS Simulator — reports 100% battery, AC present
+ *
+ * Board: any RP2040 (Pi Pico, etc.)
+ * Core:  Earle Philhower's arduino-pico  (USB Stack = "Adafruit TinyUSB")
+ * Libs:  Adafruit TinyUSB Library  (Tools -> Manage Libraries)
+ *
+ * Tools menu settings:
+ *   USB Stack: Adafruit TinyUSB
+ *   CPU Speed: 133 MHz (default)
+ */
+
 #include <Adafruit_TinyUSB.h>
 
 // ---- HID Report IDs ----
@@ -76,7 +88,7 @@ uint8_t const desc_hid_report[] = {
 Adafruit_USBD_HID usb_hid;
 
 // String table the host pulls via Get_Report on indices above
-const char* kManufacturer = "Generic USB";
+const char* kManufacturer = "Pico USB";
 const char* kProduct      = "RP2040 Virtual UPS";
 const char* kSerial       = "UPS-0001";
 const char* kChemistry    = "LiON";

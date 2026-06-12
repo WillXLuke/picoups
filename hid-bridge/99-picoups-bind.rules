@@ -1,0 +1,2 @@
+# When the RP2040 Virtual UPS's HID interface appears, hand it to picoups.
+ACTION=="add", SUBSYSTEM=="usb", ATTR{bInterfaceClass}=="03", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="80fe", RUN+="/lib/udev/picoups-bind.sh %k"
