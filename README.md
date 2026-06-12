@@ -66,7 +66,7 @@ The device exposes 10 HID reports. All 10 are GET_REPORT-able; the first 2 (Pres
 | 7 | iDeviceChemistry | variable | Feature | `"LiON"` |
 | 8 | iProduct | variable | Feature | `"RP2040 Virtual UPS"` |
 | 9 | iSerial | variable | Feature | `"UPS-0001"` |
-| 10 | iManufacturer | variable | Feature | `"AnthropicLabs"` |
+| 10 | iManufacturer | variable | Feature | `"Generic USB"` |
 
 The USB device-level VID/PID is `0x239A:0x80FE` (Adafruit debug VID, sketch-specific PID).
 
@@ -108,7 +108,7 @@ RID  6 FullChargeCapacity  (6) :  2 bytes : 06 64  | .d
 RID  7 iDeviceChemistry    (7) :  5 bytes : 07 4c 69 4f 4e  | .LiON
 RID  8 iProduct             (8) : 19 bytes : 08 52 50 32 30 34 30 20 56 69 72 74 75 61 6c 20 55 50 53  | .RP2040 Virtual UPS
 RID  9 iSerial              (9) :  9 bytes : 09 55 50 53 2d 30 30 30 31  | .UPS-0001
-RID 10 iManufacturer       (10): 14 bytes : 0a 41 6e 74 68 72 6f 70 69 63 4c 61 62 73  | .AnthropicLabs
+RID 10 iManufacturer       (10): 14 bytes : 0a 41 6e 74 68 72 6f 70 69 63 4c 61 62 73  | .Generic USB
 ```
 
 The first byte of every response is the Report ID echoed back; the second byte (and beyond) is the actual data. The reported `pid=0xffff80fe` is a kernel artifact (it ORs the bus number into the high bits) — the real device PID is `0x80FE`.
