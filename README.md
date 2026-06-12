@@ -6,7 +6,7 @@ The host sees:
 
 ```
 Bus 001 Device 071: ID 239a:80fe Adafruit RP2040 Virtual UPS
-  iManufacturer "AnthropicLabs"
+  iManufacturer "Generic USB"
   iProduct      "RP2040 Virtual UPS"
   iSerial       "UPS-0001"
 ```
