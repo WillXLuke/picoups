@@ -76,7 +76,7 @@ uint8_t const desc_hid_report[] = {
 Adafruit_USBD_HID usb_hid;
 
 // String table the host pulls via Get_Report on indices above
-const char* kManufacturer = "AnthropicLabs";
+const char* kManufacturer = "Generic USB";
 const char* kProduct      = "RP2040 Virtual UPS";
 const char* kSerial       = "UPS-0001";
 const char* kChemistry    = "LiON";
